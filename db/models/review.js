@@ -1,7 +1,7 @@
 'use strict';
 const moment = require('moment');
 module.exports = (sequelize, DataTypes) => {
-  const Reviews = sequelize.define('Reviews', {
+  const Review = sequelize.define('Review', {
     rating: DataTypes.INTEGER,
     reviewText: DataTypes.TEXT,
     userId: DataTypes.INTEGER,
@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   }, {});
-  Reviews.associate = function (models) {
+  Review.associate = function (models) {
     // associations can be defined here
-    Reviews.belongsTo(models.User, { foreignKey: 'userId' });
-    Reviews.belongsTo(models.Business, { foreignKey: 'businessId', onDelete: 'CASCADE', hooks: true });
+    Review.belongsTo(models.User, { foreignKey: 'userId' });
+    Review.belongsTo(models.Business, { foreignKey: 'businessId', onDelete: 'CASCADE', hooks: true });
   };
-  return Reviews;
+  return Review;
 };

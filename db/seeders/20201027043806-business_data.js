@@ -9,8 +9,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -18,8 +20,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -27,8 +31,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -36,8 +42,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -45,8 +53,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -54,8 +64,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -63,8 +75,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -72,8 +86,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -81,8 +97,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         businessZip: faker.address.zipCode(),
@@ -90,8 +108,10 @@ module.exports = {
         businessPhone: faker.phone.phoneNumber(),
         businessAddress: faker.address.streetAddress(),
         businessEmail: faker.internet.email(),
-        businessWebsite: faker.internet.domainName(),
-        businessHours: 'everyday 08:00 am - 7.30 pm'
+        businessWebsite: faker.internet.url(),
+        businessHours: 'everyday 08:00 am - 7.30 pm',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
     /*

@@ -11,7 +11,7 @@ module.exports = {
       },
       userZip: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       firstName: {
         allowNull: false,

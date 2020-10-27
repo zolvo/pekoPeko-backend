@@ -10,7 +10,7 @@ module.exports = {
       },
       businessZip: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       businessName: {
         allowNull: false,
@@ -18,7 +18,7 @@ module.exports = {
       },
       businessPhone: {
         allowNull: false,
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING
       },
       businessAddress: {
         allowNull: false,

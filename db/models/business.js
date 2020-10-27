@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Business = sequelize.define('Business', {
     businessZip: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true
     },
