@@ -7,14 +7,14 @@ const { authenticated, generateToken } = require('./security-utils');
 
 const router = express.Router();
 
-const email =
-  check('email')
+const businessEmail =
+  check('businessEmail')
     .isEmail()
     .withMessage('Please provide a valid email address')
     .normalizeEmail();
 
-const name =
-  check('name')
+const businessName =
+  check('businessName')
     .not().isEmpty()
     .withMessage('Please provide a business name');
 
@@ -23,7 +23,7 @@ const password =
     .not().isEmpty()
     .withMessage('Please provide a password');
 
-router.post('/', email, password, name, asyncHandler(async function (req, res, next) {
+router.post('/', businessEmail, password, businessName, asyncHandler(async function (req, res, next) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return next({ status: 422, errors: errors.array() });
@@ -39,8 +39,8 @@ router.post('/', email, password, name, asyncHandler(async function (req, res, n
 
 router.get('/me', authenticated, function (req, res) {
   res.json({
-    email: req.business.email,
-    name: req.business.name,
+    email: req.business.businessEmail,
+    name: req.business.businessName,
   });
 });
 

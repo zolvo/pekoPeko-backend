@@ -8,7 +8,7 @@ const { authenticated, generateToken } = require('./security-utils');
 const router = express.Router();
 
 const email =
-  check('email')
+  check('userEmail')
     .isEmail()
     .withMessage('Please provide a valid email address')
     .normalizeEmail();
@@ -18,15 +18,15 @@ const password =
     .not().isEmpty()
     .withMessage('Please provide a password');
 
-router.put('/', [email, password], asyncHandler(async (req, res, next) => {
+router.post('/', [email, password], asyncHandler(async (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return next({ status: 422, errors: errors.array() });
   }
 
-  const { email, password } = req.body;
-  const user = await UserRepository.findByEmail(email);
-  if (!user.isValidPassword(password)) {
+  const { userEmail, password } = req.body;
+  const user = await UserRepository.findByEmail(userEmail);
+  if (!user.validatePassword(password)) {
     const err = new Error('Login failed');
     err.status = 401;
     err.title = 'Login failed';
@@ -36,7 +36,8 @@ router.put('/', [email, password], asyncHandler(async (req, res, next) => {
   const { jti, token } = generateToken(user);
   user.tokenId = jti;
   await user.save();
-  res.json({ token, user: user.toSafeObject() });
+  const { avatar, createdAt, firstName, id, lastName, updatedAt, userZip } = user;
+  res.json({ token, user: { avatar, createdAt, firstName, id, lastName, updatedAt, userEmail, userZip } });
 }));
 
 router.delete('/', [authenticated], asyncHandler(async (req, res) => {

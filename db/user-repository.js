@@ -3,7 +3,7 @@ const { User } = require('./models');
 class NullUser {
   isValid() { return false; }
   setPassword() { }
-  isValidPassword() { return false; }
+  validatePassword() { return false; }
   toSafeObject() { return {}; }
 }
 
@@ -13,8 +13,8 @@ async function create(details) {
   return await user.save();
 }
 
-async function findByEmail(email) {
-  const user = await User.findOne({ where: { email } });
+async function findByEmail(userEmail) {
+  const user = await User.findOne({ where: { userEmail } });
   return user || new NullUser();
 }
 

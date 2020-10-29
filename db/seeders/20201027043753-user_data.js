@@ -104,6 +104,16 @@ module.exports = {
         updatedAt: new Date(),
         avatar: faker.image.avatar(),
       },
+      {
+        userZip: faker.address.zipCode(),
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        userEmail: 'demo@1234.com',
+        hashedPassword: bcrypt.hashSync('1234'),
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        avatar: faker.image.avatar(),
+      },
     ], {});
     /*
       Add altering commands here.
