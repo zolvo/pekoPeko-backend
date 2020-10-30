@@ -7,10 +7,10 @@ const { authenticated, generateToken } = require('./security-utils');
 
 const router = express.Router();
 
-const userEmail =
-  check('userEmail')
+const userZip =
+  check('userZip')
     .isEmail()
-    .withMessage('Please provide a valid email address')
+    .withMessage('Please provide a valid Zip code')
     .normalizeEmail();
 
 const firstName =
@@ -22,6 +22,12 @@ const lastName =
   check('lastName')
     .not().isEmpty()
     .withMessage('Please provide a last name');
+
+const userEmail =
+  check('userEmail')
+    .isEmail()
+    .withMessage('Please provide a valid email address')
+    .normalizeEmail();
 
 const password =
   check('password')

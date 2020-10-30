@@ -42,5 +42,17 @@ module.exports = (sequelize, DataTypes) => {
     this.hashedPassword = bcrypt.hashSync(password);
   };
 
+  User.prototype.toSafeObject = function () {
+    return {
+      id: this.id,
+      userZip: this.userZip,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      avatar: this.avatar,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
+    };
+  }
+
   return User;
 };

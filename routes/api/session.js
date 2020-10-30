@@ -36,8 +36,7 @@ router.post('/', [email, password], asyncHandler(async (req, res, next) => {
   const { jti, token } = generateToken(user);
   user.tokenId = jti;
   await user.save();
-  const { avatar, createdAt, firstName, id, lastName, updatedAt, userZip } = user;
-  res.json({ token, user: { avatar, createdAt, firstName, id, lastName, updatedAt, userEmail, userZip } });
+  res.json({ token, user: user.toSafeObject() });
 }));
 
 router.delete('/', [authenticated], asyncHandler(async (req, res) => {
