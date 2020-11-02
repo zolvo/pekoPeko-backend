@@ -34,7 +34,7 @@ router.post('/', [email, password], asyncHandler(async (req, res, next) => {
     return next(err);
   }
   const { jti, token } = generateToken(user);
-  user.tokenId = jti;
+  // user.tokenId = jti;
   await user.save();
   res.json({ token, user: user.toSafeObject() });
 }));

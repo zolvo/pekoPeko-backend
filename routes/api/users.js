@@ -9,9 +9,9 @@ const router = express.Router();
 
 const userZip =
   check('userZip')
-    .isEmail()
+    .not().isEmpty()
     .withMessage('Please provide a valid Zip code')
-    .normalizeEmail();
+// .normalizeMessage();
 
 const firstName =
   check('firstName')
@@ -34,7 +34,10 @@ const password =
     .not().isEmpty()
     .withMessage('Please provide a password');
 
-router.post('/', userEmail, password, firstName, asyncHandler(async function (req, res, next) {
+const validator = [userZip, firstName, lastName, userEmail, password]
+
+router.post('/', validator, asyncHandler(async function (req, res, next) {
+
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return next({ status: 422, errors: errors.array() });
@@ -42,8 +45,9 @@ router.post('/', userEmail, password, firstName, asyncHandler(async function (re
 
   const user = await UserRepository.create(req.body);
 
-  const { jti, token } = generateToken(user);
-  user.tokenId = jti;
+  const token = generateToken(user);
+  // const { jti, token } = generateToken(user);
+  // user.tokenId = jti;
   await user.save();
   res.json({ token, user: user.toSafeObject() });
 }));
