@@ -36,6 +36,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(150)
       },
+      delivery: {
+        allowNull: false,
+        type: Sequelize.STRING(150)
+      },
+      categories: {
+        allowNull: false,
+        type: Sequelize.STRING(150)
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

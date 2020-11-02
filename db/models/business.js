@@ -33,6 +33,14 @@ module.exports = (sequelize, DataTypes) => {
     businessHours: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    delivery: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    categories: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {});
   Business.associate = function (models) {

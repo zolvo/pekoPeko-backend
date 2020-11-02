@@ -11,6 +11,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Chinese',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -22,6 +24,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'no',
+        categories: 'Mexican',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -33,6 +37,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'no',
+        categories: 'Burger',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -44,6 +50,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Chinese',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -55,6 +63,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Italian',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -66,6 +76,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Pizza',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -77,6 +89,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'no',
+        categories: 'Burger',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -88,6 +102,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'no',
+        categories: 'Chinese',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -99,6 +115,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Thai',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -110,6 +128,8 @@ module.exports = {
         businessEmail: faker.internet.email(),
         businessWebsite: faker.internet.url(),
         businessHours: 'everyday 08:00 am - 7.30 pm',
+        delivery: 'yes',
+        categories: 'Italian',
         createdAt: new Date(),
         updatedAt: new Date()
       },
